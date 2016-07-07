@@ -23,7 +23,7 @@ elasticsearch.url: "{{ elasticsearch_url }}"
 kibana.index: "{{ kibana_index }}"
 
 # The default application to load.
-# kibana.defaultAppId: "discover"
+kibana.defaultAppId: "discover"
 
 # If your Elasticsearch is protected with basic auth, these are the user credentials
 # used by the Kibana server to perform maintenance on the kibana_index at startup. Your Kibana
@@ -67,7 +67,7 @@ kibana.index: "{{ kibana_index }}"
 # pid.file: /var/run/kibana.pid
 
 # If you would like to send the log output to a file you can set the path below.
-# logging.dest: stdout
+logging.dest: /var/log/kibana/kibana.log
 
 # Set this to true to suppress all logging output.
 # logging.silent: false
@@ -76,4 +76,4 @@ kibana.index: "{{ kibana_index }}"
 # logging.quiet: false
 
 # Set this to true to log all events, including system usage information and all requests.
-# logging.verbose: false
+logging.verbose: true
